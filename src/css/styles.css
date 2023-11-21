@@ -1,23 +1,66 @@
-/* ボタン本体 */
-.btn {
-  display: inline-block;
-  padding: 0.8em 3em;
-  background-color: #e3364a; /* 背景色 */
-  box-shadow: 0 5px 0 #ca1c30; /* 影の太さ・色 */
-  border-radius: 60px;
-  color: #fff;
-  cursor: pointer;
-  text-decoration: none; /* 文字の下線を消す */
+/*========= body背景色の変化CSS ===============*/
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    45deg,
+    #3bade3,
+    #9844b7,
+    #44ea76
+  ); /*グラデーションを定義*/
+  background-size: 200% 200%; /*サイズを大きくひきのばす*/
+  animation: bggradient 20s ease infinite;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
-/* ホバー時 */
+@keyframes bggradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#logo {
+  display: inline;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+#sitename {
+  font-family: "M PLUS Rounded 1c", "sans-serif";
+  font-size: 200%;
+  font-weight: bold;
+  color: #222222;
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+  background: #fff8f8;
+  border: 3px solid #646464;
+  border-radius: 35px;
+  color: #646464;
+  display: inline;
+  font-family: "M PLUS Rounded 1c", "sans-serif";
+  font-weight: bold;
+  font-size: 100%;
+  margin: 15px 5px;
+  box-shadow: 0px 4px 0px rgba(000, 000, 000, 0.3);
+  -moz-box-shadow: 0px 4px 0px rgba(000, 000, 000, 0.3);
+  -webkit-box-shadow: 0px 4px 0px rgba(000, 000, 000, 0.3);
+  transition: background-color 0.5s ease-in;
+  -webkit-transition: background-color 0.5s ease-in;
+}
 .btn:hover {
   box-shadow: none;
-  transform: translateY(5px);
-}
-
-/* クリック時 */
-.btn:active {
-  box-shadow: none;
-  transform: translateY(5px);
+  position: relative;
+  top: 3px;
 }
