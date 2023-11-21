@@ -27,14 +27,39 @@ const audios = {
   sigh_R: ["./audio/sigh01_R.wav"],
 };
 
-const playAudio = (id) => {
-  const audioList = eval(`audios.${id}`);
-  const audio = new Audio(),
-    num = Math.floor(Math.random() * audioList.length);
+const audioCache = {};
+Object.keys(audios).forEach((key) => {
+  audioCache[key] = audios[key].map((filePath) => {
+    const audio = new Audio(filePath);
+    audio.load();
+    return audio;
+  });
+});
 
-  if (num == audioList.length) {
-    num = audioList.length - 1;
+const playAudio = (id) => {
+  const audioList = audioCache[id];
+  if (!audioList || audioList.length === 0) {
+    console.error(`Invalid audio ID: ${id}`);
+    return;
   }
-  audio.src = audioList[num];
+
+  const num = Math.floor(Math.random() * audioList.length);
+  const audio = audioList[num];
   audio.play();
 };
+
+document.getElementById("earpick_L").addEventListener("click", () => {
+  playAudio("earpick_L");
+});
+
+document.getElementById("earpick_R").addEventListener("click", () => {
+  playAudio("earpick_R");
+});
+
+document.getElementById("sigh_L").addEventListener("click", () => {
+  playAudio("sigh_L");
+});
+
+document.getElementById("sigh_R").addEventListener("click", () => {
+  playAudio("sigh_R");
+});
