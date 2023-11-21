@@ -14,31 +14,35 @@
   </head>
   <body>
     <header>
-      <div>
-        <img id="logo" src="./favicon.ico" />
+      <div id="sitename-container">
+        <img id="logo" src="./favicon.ico" alt="Logo" />
         <p1 id="sitename">ASMasteR</p1>
       </div>
     </header>
     <main>
       <div>
-        <button id="earpick_L" class="btn" onclick="playAudio(this.id)">
+        <button id="earpick_L" class="btn" onclick="playAudio('earpick_L')">
           綿棒L
         </button>
 
-        <button id="earpick_R" class="btn" onclick="playAudio(this.id)">
+        <button id="earpick_R" class="btn" onclick="playAudio('earpick_R')">
           綿棒R
         </button>
       </div>
       <div>
-        <button id="sigh_L" class="btn" onclick="playAudio(this.id)">
+        <button id="sigh_L" class="btn" onclick="playAudio('sigh_L')">
           吐息L
         </button>
 
-        <button id="sigh_R" class="btn" onclick="playAudio(this.id)">
+        <button id="sigh_R" class="btn" onclick="playAudio('sigh_R')">
           吐息R
         </button>
       </div>
     </main>
+
+    <footer>
+      <p>&copy; 2023 ASMasteR. All rights reserved.</p>
+    </footer>
 
     <script src="./js/index.js" type="text/javascript"></script>
   </body>
