@@ -68,3 +68,11 @@ document.getElementById("sigh_R").addEventListener("click", () => {
   const volume = document.getElementById("volumeControl").value / 100;
   playAudio("sigh_R", volume);
 });
+
+document.addEventListener(
+  "dblclick",
+  function (e) {
+    e.preventDefault();
+  },
+  { passive: false }
+);
