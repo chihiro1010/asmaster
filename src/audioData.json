@@ -1,0 +1,30 @@
+{
+  "audios": {
+    "earpick_L": [
+      "./audio/earpick01_L.wav",
+      "./audio/earpick02_L.wav",
+      "./audio/earpick03_L.wav",
+      "./audio/earpick04_L.wav",
+      "./audio/earpick05_L.wav",
+      "./audio/earpick06_L.wav",
+      "./audio/earpick07_L.wav",
+      "./audio/earpick08_L.wav",
+      "./audio/earpick09_L.wav",
+      "./audio/earpick10_L.wav"
+    ],
+    "earpick_R": [
+      "./audio/earpick01_R.wav",
+      "./audio/earpick02_R.wav",
+      "./audio/earpick03_R.wav",
+      "./audio/earpick04_R.wav",
+      "./audio/earpick05_R.wav",
+      "./audio/earpick06_R.wav",
+      "./audio/earpick07_R.wav",
+      "./audio/earpick08_R.wav",
+      "./audio/earpick09_R.wav",
+      "./audio/earpick10_R.wav"
+    ],
+    "sigh_L": ["./audio/sigh01_L.wav"],
+    "sigh_R": ["./audio/sigh01_R.wav"]
+  }
+}
