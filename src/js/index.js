@@ -36,7 +36,7 @@ Object.keys(audios).forEach((key) => {
   });
 });
 
-const playAudio = (id) => {
+const playAudio = (id, volume = 1.0) => {
   const audioList = audioCache[id];
   if (!audioList || audioList.length === 0) {
     console.error(`Invalid audio ID: ${id}`);
@@ -45,21 +45,26 @@ const playAudio = (id) => {
 
   const num = Math.floor(Math.random() * audioList.length);
   const audio = audioList[num];
+  audio.volume = volume;
   audio.play();
 };
 
 document.getElementById("earpick_L").addEventListener("click", () => {
-  playAudio("earpick_L");
+  const volume = document.getElementById("volumeControl").value / 100;
+  playAudio("earpick_L", volume);
 });
 
 document.getElementById("earpick_R").addEventListener("click", () => {
-  playAudio("earpick_R");
+  const volume = document.getElementById("volumeControl").value / 100;
+  playAudio("earpick_R", volume);
 });
 
 document.getElementById("sigh_L").addEventListener("click", () => {
-  playAudio("sigh_L");
+  const volume = document.getElementById("volumeControl").value / 100;
+  playAudio("sigh_L", volume);
 });
 
 document.getElementById("sigh_R").addEventListener("click", () => {
-  playAudio("sigh_R");
+  const volume = document.getElementById("volumeControl").value / 100;
+  playAudio("sigh_R", volume);
 });

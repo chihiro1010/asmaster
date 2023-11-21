@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ダブルタップでの拡大を制限 -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c"
       rel="stylesheet"
@@ -16,7 +21,7 @@
     <header>
       <div id="sitename-container">
         <img id="logo" src="./favicon.ico" alt="Logo" />
-        <p1 id="sitename">ASMasteR</p1>
+        <h1 id="sitename">ASMasteR</h1>
       </div>
     </header>
     <main>
@@ -38,6 +43,7 @@
           吐息R
         </button>
       </div>
+      <input type="range" id="volumeControl" min="0" max="100" value="100" />
     </main>
 
     <footer>
