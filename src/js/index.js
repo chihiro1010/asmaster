@@ -36,7 +36,7 @@ Object.keys(audios).forEach((key) => {
   });
 });
 
-const playAudio = (id, volume = 1.0) => {
+const playAudio = (id) => {
   const audioList = audioCache[id];
   if (!audioList || audioList.length === 0) {
     console.error(`Invalid audio ID: ${id}`);
@@ -45,30 +45,26 @@ const playAudio = (id, volume = 1.0) => {
 
   const num = Math.floor(Math.random() * audioList.length);
   const audio = audioList[num];
-  audio.volume = volume;
   audio.play();
 };
 
 document.getElementById("earpick_L").addEventListener("click", () => {
-  const volume = document.getElementById("volumeControl").value / 100;
-  playAudio("earpick_L", volume);
+  playAudio("earpick_L");
 });
 
 document.getElementById("earpick_R").addEventListener("click", () => {
-  const volume = document.getElementById("volumeControl").value / 100;
-  playAudio("earpick_R", volume);
+  playAudio("earpick_R");
 });
 
 document.getElementById("sigh_L").addEventListener("click", () => {
-  const volume = document.getElementById("volumeControl").value / 100;
-  playAudio("sigh_L", volume);
+  playAudio("sigh_L");
 });
 
 document.getElementById("sigh_R").addEventListener("click", () => {
-  const volume = document.getElementById("volumeControl").value / 100;
-  playAudio("sigh_R", volume);
+  playAudio("sigh_R");
 });
 
+// ダブルタップ時拡大防止(ihone用)
 document.addEventListener(
   "dblclick",
   function (e) {
