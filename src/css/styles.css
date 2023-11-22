@@ -1,3 +1,4 @@
+/* ページ全体のスタイル */
 body {
   margin: 20px;
   font-family: "M PLUS Rounded 1c", "sans-serif";
@@ -6,34 +7,36 @@ body {
   animation: bggradient 10s ease infinite;
 }
 
+/* 背景のアニメーション */
 @keyframes bggradient {
-  0% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
   }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
+/* ヘッダーのスタイル */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-  border-radius: 10px; /* Rounded corners for a modern look */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* ロゴのスタイル */
 #logo {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 
+/* サイト名のスタイル */
 #sitename-container {
   display: flex;
   align-items: center;
@@ -46,6 +49,7 @@ header {
   margin-left: 10px;
 }
 
+/* メインコンテンツのスタイル */
 main {
   display: flex;
   flex-direction: column;
@@ -54,32 +58,28 @@ main {
   margin-top: 20px;
 }
 
+/* ボタンのスタイル */
 .btn {
   width: 150px;
   height: 150px;
-  background: rgba(255, 255, 255, 0.1); /* Transparent background */
+  background: rgba(255, 255, 255, 0.1);
   border: none;
-  border-radius: 10px; /* Slight border-radius for a modern touch */
-  color: #fff; /* Text color */
+  border-radius: 10px;
+  color: #fff;
   font-weight: bold;
   font-size: 1.2em;
   margin: 15px 5px;
   cursor: pointer;
   transition: background-color 0.5s ease-in, transform 0.2s ease-in;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.2
-  ); /* Slightly darker transparent background on hover */
+  background-color: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
 }
 
-/* Media Query for smaller screens (e.g., mobile) */
+/* メディアクエリ（スマートフォンなどの小さい画面に対するスタイル） */
 @media only screen and (max-width: 600px) {
   header {
     flex-direction: column;
@@ -106,33 +106,4 @@ main {
     font-size: 1em;
     margin: 10px 5px;
   }
-}
-
-#volumeControl {
-  width: 100px;
-  height: 10px;
-  margin-top: 10px;
-  background: linear-gradient(90deg, #4bc6ff, #c95ef0, #42e974);
-  border: none;
-  border-radius: 5px;
-  appearance: none;
-  outline: none;
-  transition: background 0.3s ease;
-}
-
-#volumeControl::-webkit-slider-thumb {
-  width: 20px;
-  height: 20px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  appearance: none;
-}
-
-#volumeControl::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  background-color: #ffffff;
-  border: 2px solid #42e974;
-  border-radius: 50%;
-  appearance: none;
 }
